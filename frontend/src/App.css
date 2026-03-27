@@ -1,0 +1,193 @@
+/* Layout general */
+.app-title {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--text-strong);
+}
+
+/* Cards */
+.card,
+.card-custom {
+  background: var(--bg-card);
+  border: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-custom {
+  border-radius: var(--radius-md);
+}
+
+/* Navbar */
+.navbar-panel {
+  height: 60px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Sidebar */
+.sidebar-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: var(--sidebar-bg-active);
+  color: #fff;
+}
+
+/* Tablas generales */
+.table th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+/* Horario */
+.table-schedule th {
+  background: var(--sidebar-bg);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.table-schedule td {
+  height: 90px;
+  vertical-align: top;
+}
+
+.cell {
+  border-radius: 10px;
+  padding: 6px;
+  transition: transform 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.02);
+}
+
+.cell-content {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.horario-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+.horario-header {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.horario-table td {
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.celda {
+  border-radius: 14px;
+  padding: 10px;
+  min-height: 80px;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+.celda-vacia {
+  background: var(--bg-soft);
+}
+
+.celda-ocupada {
+  color: #fff;
+}
+
+.celda-content {
+  text-align: center;
+}
+
+.celda:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-delete,
+.horario-delete-btn {
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.btn-delete {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.celda:hover .btn-delete {
+  opacity: 1;
+}
+
+/* Paneles de estado */
+.panel-soft-danger {
+  background: var(--danger-soft);
+  border-left: 4px solid var(--danger);
+}
+
+.panel-soft-warning {
+  background: var(--warning-soft);
+  border-left: 4px solid var(--warning);
+}
+
+.panel-soft-success {
+  background: var(--success-soft);
+  border-left: 4px solid var(--success);
+}
+
+/* Login */
+.login-wrapper {
+  min-height: 100vh;
+  background: var(--bg-page);
+}
+
+.login-card {
+  width: 350px;
+  border-radius: var(--radius-lg);
+}
+
+/* Botones y formularios */
+.btn {
+  border-radius: var(--radius-sm);
+}
+
+select.form-select,
+.form-control,
+.form-select {
+  border-radius: var(--radius-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-schedule td {
+    min-width: 110px;
+    height: 80px;
+  }
+
+  .login-card {
+    width: 100%;
+  }
+}
