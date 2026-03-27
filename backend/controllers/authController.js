@@ -60,4 +60,6 @@ exports.login = async (req, res) => {
     console.error("Error login:", error);
     res.status(500).json({ error: "Error interno" });
   }
+  console.log("HASH RAW:", user.password_hash);
+console.log("HASH LENGTH:", user.password_hash.length);
 };

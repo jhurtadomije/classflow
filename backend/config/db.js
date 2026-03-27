@@ -21,12 +21,16 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT || 4000,
 
   ssl: {
-    rejectUnauthorized: true,
+    rejectUnauthorized: false,
   },
-
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
 });
 
 module.exports = pool;
+(async () => {
+  try {
+    const [rows] = await pool.query("SELECT DATABASE() as db");
+    console.log("🟢 CONECTADO A BD:", rows[0].db);
+  } catch (err) {
+    console.error("❌ ERROR CONEXIÓN BD:", err.message);
+  }
+})();
