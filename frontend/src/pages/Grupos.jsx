@@ -34,6 +34,8 @@ export default function Grupos() {
   };
   init();
 }, []);
+
+
   // ➕ CREAR
   const crear = async () => {
     if (!nombre || !cursoId) {
